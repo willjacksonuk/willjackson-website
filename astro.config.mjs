@@ -3,6 +3,8 @@
 import { defineConfig, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
+import cloudflare from "@astrojs/cloudflare";
+
 export default defineConfig({
   fonts: [
     {
@@ -27,7 +29,10 @@ export default defineConfig({
       cssVariable: "--font-icons",
     },
   ],
+
   vite: {
     plugins: [tailwindcss()],
   },
+
+  adapter: cloudflare(),
 });
