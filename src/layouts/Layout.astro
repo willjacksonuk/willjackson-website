@@ -1,0 +1,78 @@
+---
+import "../styles/global.css";
+import { Font } from "astro:assets";
+
+const { title = "Will Jackson" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Web developer and WordPress specialist based in Surrey."
+        />
+        <title>{title}</title>
+        <Font cssVariable="--font-sans" preload />
+        <Font cssVariable="--font-heading" />
+        <Font cssVariable="--font-icons" />
+    </head>
+
+    <body class="bg-stone-200 text-neutral-950 antialiased">
+        <!-- Header -->
+        <header
+            class="sticky top-0 z-20 border-b border-stone-200 bg-stone-50/90 backdrop-blur"
+        >
+            <div
+                class="mx-auto flex w-[min(calc(100%-2rem),1120px)] flex-col items-center justify-between gap-3 py-4 sm:flex-row"
+            >
+                <a
+                    href="#top"
+                    class="font-heading text-2xl font-bold tracking-tight text-teal-950"
+                >
+                    Will Jackson
+                </a>
+
+                <nav
+                    class="flex flex-wrap justify-center gap-5 text-md font-semibold sm:text-base"
+                    aria-label="Primary navigation"
+                >
+                    <a class="transition hover:text-teal-700" href="#work"
+                        >Work</a
+                    >
+                    <a class="transition hover:text-teal-700" href="#about"
+                        >About</a
+                    >
+                    <a class="transition hover:text-teal-700" href="#contact"
+                        >Contact</a
+                    >
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main id="top" class="py-8">
+            <slot />
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="border-t border-stone-400 py-8 text-center text-sm text-neutral-600"
+        >
+            <div class="mx-auto w-[min(calc(100%-2rem),1120px)]">
+                © {new Date().getFullYear()} Will Jackson
+                <p class="mt-2">Built with Astro and Tailwind CSS.</p>
+            </div>
+        </footer>
+
+        <div class="zoom-overlay" aria-hidden="true">
+            <img alt="" />
+        </div>
+
+        <script>
+            import "../scripts/image-zoom.js";
+        </script>
+    </body>
+</html>

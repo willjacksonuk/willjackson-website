@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-heading), serif;
+  --font-icon: var(--font-google-icons);
+}
+
+.zoom-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	display: block;
+	padding: 2rem;
+	overflow: auto;
+	background: rgba(0, 0, 0, 0.82);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s ease;
+}
+
+.zoom-overlay.active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.zoom-overlay img {
+	display: block;
+	width: min(100%, 1400px);
+	height: auto;
+	margin: 0 auto;
+	background: white;
+	border-radius: 0.5rem;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+	cursor: zoom-out;
+}
+
+.zoomable-img {
+	cursor: zoom-in;
+}
