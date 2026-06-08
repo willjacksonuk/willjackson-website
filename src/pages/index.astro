@@ -32,14 +32,14 @@ import { contact } from "../attributes/contact";
 
 				<div class="mt-8 flex flex-wrap gap-4">
 					<a
-						class="inline-flex rounded-lg border border-teal-900 bg-teal-900 px-6 py-3 font-bold text-white transition hover:-tranteal-y-0.5 hover:shadow-md"
+						class="inline-flex rounded-lg border border-teal-900 bg-teal-900 px-6 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md"
 						href="#work"
 					>
 						View work
 					</a>
 
 					<a
-						class="inline-flex rounded-lg border border-teal-900 px-6 py-3 font-bold text-teal-700 transition hover:-tranteal-y-0.5 hover:shadow-md"
+						class="inline-flex rounded-lg border border-teal-900 px-6 py-3 font-bold text-teal-700 transition hover:-translate-y-0.5 hover:shadow-md"
 						href="#contact"
 					>
 						Contact me
@@ -62,9 +62,9 @@ import { contact } from "../attributes/contact";
 			>
 				{
 					projects.map((project) => (
-						<article class="flex h-full flex-col overflow-hidden rounded-lg border border-stone-400 bg-white shadow-sm transition hover:-tranteal-y-0.5 hover:shadow-md">
+						<article class="flex h-full flex-col overflow-hidden rounded-lg border border-stone-400 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
 							{project.image && project.imageAlt && (
-								<a class="block bg-stone-100 p-3">
+								<div class="bg-stone-100 p-3">
 									<div class="overflow-hidden rounded-lg border border-stone-400 bg-white">
 										<div class="flex gap-1.5 border-b border-stone-200 bg-stone-50 px-3 py-2">
 											<span class="h-2.5 w-2.5 rounded-full bg-stone-300" />
@@ -72,33 +72,16 @@ import { contact } from "../attributes/contact";
 											<span class="h-2.5 w-2.5 rounded-full bg-stone-300" />
 										</div>
 
-										{project.image && project.imageAlt && (
-											<div class="block bg-stone-100 p-3">
-												<div class="overflow-hidden rounded-xl border border-stone-200 bg-white">
-													<div class="flex gap-1.5 border-b border-stone-200 bg-stone-50 px-3 py-2">
-														<span class="h-2.5 w-2.5 rounded-full bg-stone-300" />
-														<span class="h-2.5 w-2.5 rounded-full bg-stone-300" />
-														<span class="h-2.5 w-2.5 rounded-full bg-stone-300" />
-													</div>
-
-													<div class="w-full overflow-hidden bg-stone-100">
-														<img
-															src={
-																project.image
-																	.src
-															}
-															alt={
-																project.imageAlt
-															}
-															class="zoomable-img h-auto w-full aspect-16/9"
-															loading="lazy"
-														/>
-													</div>
-												</div>
-											</div>
-										)}
+										<div class="w-full overflow-hidden bg-stone-100 aspect-16/9">
+											<img
+												src={project.image.src}
+												alt={project.imageAlt}
+												class="zoomable-img h-auto w-full"
+												loading="lazy"
+											/>
+										</div>
 									</div>
-								</a>
+								</div>
 							)}
 
 							<div class="flex flex-1 flex-col p-6">
@@ -241,9 +224,9 @@ import { contact } from "../attributes/contact";
 				{
 					contact.map((link) => (
 						<a
-							class="rounded-lg border border-stone-400 bg-white p-5 shadow-sm transition hover:-tranteal-y-0.5 hover:shadow-md"
+							class="rounded-lg border border-stone-400 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
 							href={link.href}
-							target="blank"
+							target="_blank"
 						>
 							<span class="block font-bold text-teal-900">
 								{link.label}

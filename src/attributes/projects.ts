@@ -59,7 +59,7 @@ export const projects: Project[] = [
     description:
       'WordPress-based learning platform for scheduled African language courses, using custom content structures and WooCommerce virtual products to manage course information and booking.',
     link: '#projects',
-    linkText: 'In development',
+    linkText: 'Contact me for more details',
     image: bantuLearn,
     imageAlt: 'Screenshot of the Bantu Learn website',
     status: 'in-development',
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     description:
       'Astro website for a local garden maintenance business, with responsibility for the frontend UI, brand direction, responsive layout and on-page SEO foundations.',
     link: '#projects',
-    linkText: 'In development',
+    linkText: 'Contact me for more details',
     image: jamesWilliams,
     imageAlt: 'Screenshot of the James Williams Garden Maintenance website',
     status: 'in-development',
