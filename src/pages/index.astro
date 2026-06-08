@@ -66,17 +66,12 @@ import { contact } from "../attributes/contact";
 							{project.image && project.imageAlt && (
 								<div class="bg-stone-100 p-3">
 									<div class="overflow-hidden rounded-lg border border-stone-400 bg-white">
-										<div class="flex gap-1.5 border-b border-stone-200 bg-stone-50 px-3 py-2">
-											<span class="h-2.5 w-2.5 rounded-full bg-stone-300" />
-											<span class="h-2.5 w-2.5 rounded-full bg-stone-300" />
-											<span class="h-2.5 w-2.5 rounded-full bg-stone-300" />
-										</div>
-
-										<div class="w-full overflow-hidden bg-stone-100 aspect-16/9">
+										<div class="w-full overflow-hidden bg-stone-100">
 											<img
 												src={project.image.src}
 												alt={project.imageAlt}
-												class="zoomable-img h-auto w-full"
+												class="zoomable-img w-full overflow-hidden bg-stone-100 aspect-16/9"
+
 												loading="lazy"
 											/>
 										</div>
