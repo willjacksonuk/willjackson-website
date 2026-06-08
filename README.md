@@ -7,7 +7,7 @@ Personal portfolio website, built to showcase selected web development work, tec
 * Astro
 * Tailwind CSS
 * TypeScript
-* Cloudflare Pages
+* Cloudflare Workers
 
 ## Features
 
