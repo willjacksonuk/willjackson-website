@@ -1,4 +1,10 @@
-export const contact = [
+export type Contact = {
+  label: string; 
+  text: string;
+  href: string;
+};
+
+export const contact: Contact[] = [
   {
     label: 'Email',
     text: 'will@willjackson.uk',

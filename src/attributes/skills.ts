@@ -1,4 +1,9 @@
-export const skills = [
+export type Skill = {
+  title: string;
+  skills: string;
+}
+
+export const skills: Skill[] = [
   {
     title: 'Development',
     skills: 'WordPress, WooCommerce, PHP, JavaScript, React, Astro, HTML, CSS',

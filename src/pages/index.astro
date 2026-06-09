@@ -17,29 +17,29 @@ import { contact } from "../attributes/contact";
 		-->
 
 		<section>
-			<div class="p-8 border rounded-lg border-stone-400">
+			<div class="py-16 border-y border-stone-400">
 				<h1
-					class="max-w-4xl font-heading text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl"
+					class="w-full max-w-4xl font-heading text-5xl font-semibold tracking-tight sm:w-auto sm:text-6xl lg:text-7xl"
 				>
 					Web developer and WordPress specialist based in Surrey.
 				</h1>
 
-				<p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
+				<p class="w-full mt-6 max-w-4xl text-lg leading-8 text-neutral-600 sm:w-auto">
 					I build practical, commercially useful websites and tools
 					using WordPress, WooCommerce, PHP, JavaScript and modern
 					frontend workflows.
 				</p>
 
-				<div class="mt-8 flex flex-wrap gap-4">
+				<div class="mt-8 flex flex-col gap-4 sm:flex-row">
 					<a
-						class="inline-flex rounded-lg border border-teal-900 bg-teal-900 px-6 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md"
+						class="inline-flex w-full justify-center rounded-lg border border-teal-900 bg-teal-900 px-6 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md sm:w-auto"
 						href="#work"
 					>
 						View work
 					</a>
 
 					<a
-						class="inline-flex rounded-lg border border-teal-900 px-6 py-3 font-bold text-teal-700 transition hover:-translate-y-0.5 hover:shadow-md"
+						class="inline-flex w-full justify-center rounded-lg border border-teal-900 px-6 py-3 font-bold text-teal-700 transition hover:-translate-y-0.5 hover:shadow-md sm:w-auto"
 						href="#contact"
 					>
 						Contact me
@@ -71,7 +71,6 @@ import { contact } from "../attributes/contact";
 												src={project.image.src}
 												alt={project.imageAlt}
 												class="zoomable-img w-full object-cover aspect-video"
-
 												loading="lazy"
 											/>
 										</div>
