@@ -3,6 +3,7 @@ import type { ImageMetadata } from 'astro';
 import wovenAndWoods from '../assets/images/projects/woven-and-woods.png';
 import wwDataTools from '../assets/images/projects/ww-data-tools.png';
 import theGallimaufry from '../assets/images/projects/the-gallimaufry.png';
+import wwProjectGallery from '../assets/images/projects/ww-project-gallery.png';
 import bantuLearn from '../assets/images/projects/bantu-learn.png';
 import wwKnowledgeBase from '../assets/images/projects/ww-knowledge-base.png';
 import approvedByGeorgie from '../assets/images/projects/approved-by-georgie.png';
@@ -50,6 +51,17 @@ export const projects: Project[] = [
     linkText: 'Visit site',
     image: theGallimaufry,
     imageAlt: 'Screenshot of The Gallimaufry website',
+    status: 'live',
+  },
+  {
+    title: 'W&W Project Gallery',
+    meta: 'Piwigo / PHP / Custom theme',
+    description:
+      'Customised PHP-based gallery platform built on Piwigo to showcase completed luxury flooring projects with bespoke theming and brand integration.',
+    link: 'https://gallery.wovenandwoods.com',
+    linkText: 'Visit site',
+    image: wwProjectGallery,
+    imageAlt: 'Screenshot of the W&W Project Gallery recipe site',
     status: 'live',
   },
   {
