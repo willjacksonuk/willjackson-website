@@ -6,16 +6,11 @@ import { skills } from "../attributes/skills";
 import { contact } from "../attributes/contact";
 ---
 
-<Layout title="Will Jackson | Web developer and WordPress specialist">
+<Layout
+	title="Will Jackson - Web developer and WordPress specialist"
+	description=" Web developer and WordPress specialist based in Surrey. Available for agency and in-house roles. Experienced with WordPress, WooCommerce, Astro and modern frontend workflows."
+>
 	<div class="mx-auto w-[min(calc(100%-2rem),1120px)]">
-		<!-- Hero -->
-
-		<!-- Columns
-		<section
-			class="grid min-h-[70vh] items-center gap-12 py-12 lg:grid-cols-[1.2fr_0.8fr]"
-		>
-		-->
-
 		<section>
 			<div class="py-16 border-y border-stone-400">
 				<h1
@@ -24,7 +19,9 @@ import { contact } from "../attributes/contact";
 					Web developer and WordPress specialist based in Surrey.
 				</h1>
 
-				<p class="w-full mt-6 max-w-4xl text-lg leading-8 text-neutral-600 sm:w-auto">
+				<p
+					class="w-full mt-6 max-w-4xl text-lg leading-8 text-neutral-600 sm:w-auto"
+				>
 					I build practical, commercially useful websites and tools
 					using WordPress, WooCommerce, PHP, JavaScript and modern
 					frontend workflows.
@@ -221,6 +218,7 @@ import { contact } from "../attributes/contact";
 							class="rounded-lg border border-stone-400 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
 							href={link.href}
 							target="_blank"
+							aria-label={link.ariaLabel}
 						>
 							<span class="block font-bold text-teal-900">
 								{link.label}

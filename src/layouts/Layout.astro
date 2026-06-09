@@ -1,8 +1,14 @@
 ---
 import "../styles/global.css";
 import { Font } from "astro:assets";
+import { SEO } from "astro-seo";
 
-const { title = "Will Jackson" } = Astro.props;
+interface Props {
+    title: string;
+    description?: string;
+}
+
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,11 +17,54 @@ const { title = "Will Jackson" } = Astro.props;
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Web developer and WordPress specialist based in Surrey."
+
+        <!-- SEO -->
+        <SEO
+            title={title}
+            description={description}
+            canonical="https://willjackson.uk"
+            openGraph={{
+                basic: {
+                    title: title,
+                    type: "website",
+                    image: "https://willjackson.uk/wj-opengraph.png",
+                    url: "https://willjackson.uk",
+                },
+            }}
+            extend={{
+                meta: [
+                    {
+                        name: "twitter:image",
+                        content: "https://willjackson.uk/wj-opengraph.png",
+                    },
+                    {
+                        name: "twitter:title",
+                        content:
+                            "Will Jackson - Web developer and WordPress specialist",
+                    },
+                    { name: "twitter:card", content: "summary_large_image" },
+                    { name: "twitter:description", content: description ?? "" },
+                ],
+            }}
         />
-        <title>{title}</title>
+
+        <!-- Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Will Jackson",
+                "url": "https://willjackson.uk",
+                "email": "will@willjackson.uk",
+                "jobTitle": "Web Developer",
+                "sameAs": [
+                    "https://github.com/willjacksonuk",
+                    "https://linkedin.com/in/wejackson"
+                ]
+            }
+        </script>
+
+        <!-- Fonts -->
         <Font cssVariable="--font-sans" preload />
         <Font cssVariable="--font-heading" />
         <Font cssVariable="--font-icons" />
