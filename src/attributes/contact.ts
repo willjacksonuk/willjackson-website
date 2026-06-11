@@ -27,7 +27,7 @@ export const contact: Contact[] = [
   {
     label: 'CV',
     text: 'Download PDF',
-    href: '/will_jackson_cv.pdf',
+    href: '/willjackson-cv-public.pdf',
     ariaLabel: 'Download Will Jackson\'s CV (PDF)'
   },
 ];
