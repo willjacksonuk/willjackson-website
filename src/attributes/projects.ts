@@ -1,7 +1,7 @@
 import type { ImageMetadata } from 'astro';
 
 import wovenAndWoods from '../assets/images/projects/woven-and-woods.png';
-import wwDataTools from '../assets/images/projects/ww-data-tools.png';
+import wwDataConverter from '../assets/images/projects/ww-data-converter.png';
 import theGallimaufry from '../assets/images/projects/the-gallimaufry.png';
 import wwProjectGallery from '../assets/images/projects/ww-project-gallery.png';
 import bantuLearn from '../assets/images/projects/bantu-learn.png';
@@ -32,14 +32,14 @@ export const projects: Project[] = [
     status: 'live',
   },
   {
-    title: 'W&W Product Data Tools',
-    meta: 'React / Vite',
+    title: 'W&W Product Data Converter',
+    meta: 'HTML / JavaScript / Tailwind CSS',
     description:
       'Internal browser-based tool for converting product database exports into import-ready files for WooCommerce, Simpro and showroom workflows.',
     link: '#contact',
     linkText: 'Contact me for more details',
-    image: wwDataTools,
-    imageAlt: 'Screenshot of the W&W Data Tools interface',
+    image: wwDataConverter,
+    imageAlt: 'Screenshot of the W&W Data Converter interface',
     status: 'internal',
   },
   {
