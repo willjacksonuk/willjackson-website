@@ -30,6 +30,9 @@ const { title, description } = Astro.props;
                     image: "https://willjackson.uk/wj-opengraph.png",
                     url: "https://willjackson.uk",
                 },
+                optional: {
+                    description: description ?? "",
+                },
             }}
             extend={{
                 meta: [
@@ -39,8 +42,7 @@ const { title, description } = Astro.props;
                     },
                     {
                         name: "twitter:title",
-                        content:
-                            "Will Jackson - Web developer and WordPress specialist",
+                        content: "Will Jackson - Web developer and WordPress specialist",
                     },
                     { name: "twitter:card", content: "summary_large_image" },
                     { name: "twitter:description", content: description ?? "" },
@@ -89,11 +91,11 @@ const { title, description } = Astro.props;
                     class="flex flex-wrap justify-center gap-5 text-md font-semibold sm:text-base"
                     aria-label="Primary navigation"
                 >
-                    <a class="transition hover:text-teal-700" href="#work"
-                        >Work</a
-                    >
                     <a class="transition hover:text-teal-700" href="#about"
                         >About</a
+                    >
+                    <a class="transition hover:text-teal-700" href="#work"
+                        >Work</a
                     >
                     <a class="transition hover:text-teal-700" href="#contact"
                         >Contact</a
