@@ -35,3 +35,8 @@ npm run build
 ```bash
 npm run preview
 ```
+
+## Deployment
+```bash
+npx wrangler deploy
+```
