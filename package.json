@@ -1,33 +1,24 @@
 {
   "name": "willjackson-uk",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "node": ">=22.12.0"
   },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "npm run build && wrangler dev",
-    "astro": "astro",
-    "generate-types": "wrangler types",
-    "deploy": "npm run build && wrangler deploy"
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.1.3",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^7.1.2",
     "astro-seo": "^1.1.0",
     "tailwindcss": "^4.3.0"
   },
-  "devDependencies": {
-    "wrangler": "^4.98.0"
-  },
   "allowScripts": {
-    "esbuild@0.28.0": true,
-    "sharp@0.34.5": true,
-    "workerd@1.20260714.1": true,
-    "esbuild@0.28.1": true
+    "sharp@0.34.5": true
   }
 }

@@ -2,11 +2,11 @@
 // @ts-check
 import { defineConfig, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-import cloudflare from "@astrojs/cloudflare";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://willjackson.uk",
+  output: "static",
   fonts: [
     {
       provider: fontProviders.google(),
@@ -35,6 +35,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  adapter: cloudflare(),
   integrations: [sitemap()],
 });

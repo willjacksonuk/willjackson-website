@@ -7,7 +7,6 @@ Personal portfolio website, built to showcase selected web development work, tec
 * Astro
 * Tailwind CSS
 * TypeScript
-* Cloudflare Workers
 
 ## Features
 
@@ -34,9 +33,4 @@ npm run build
 
 ```bash
 npm run preview
-```
-
-## Deployment
-```bash
-npx wrangler deploy
 ```
